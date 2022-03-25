@@ -22,11 +22,6 @@ const config = {
 					},
 					{
 						loader: 'css-loader',
-						options: {
-							modules: true,
-							localsConvention: 'camelCase',
-							sourceMap: true,
-						},
 					},
 				],
 			},

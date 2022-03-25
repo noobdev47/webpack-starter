@@ -8,6 +8,7 @@ const config = {
 	},
 	output: {
 		filename: 'static/[name].[fullhash].js',
+		clean: true,
 	},
 	devtool: 'source-map',
 	module: {
@@ -16,16 +17,10 @@ const config = {
 				test: /\.css$/,
 				use: [
 					{
-						loader: 'css-loader',
-						options: {
-							modules: true,
-							importLoaders: 1,
-							localsConvention: 'camelCase',
-							sourceMap: true,
-						},
+						loader: 'style-loader',
 					},
 					{
-						loader: 'postcss-loader',
+						loader: 'css-loader',
 					},
 				],
 			},
