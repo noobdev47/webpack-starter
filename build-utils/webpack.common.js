@@ -23,6 +23,7 @@ const config = {
 		],
 	},
 	optimization: {
+		runtimeChunks: 'single',
 		splitChunks: {
 			cacheGroups: {
 				styles: {
@@ -32,10 +33,9 @@ const config = {
 					enforce: true,
 				},
 				vendor: {
-					chunks: 'initial',
-					test: 'vendor',
-					name: 'vendor',
-					enforce: true,
+					chunks: 'all',
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
 				},
 			},
 		},
