@@ -23,6 +23,7 @@ const config = {
 		],
 	},
 	optimization: {
+		moduleIds: 'deterministic',
 		runtimeChunks: 'single',
 		splitChunks: {
 			cacheGroups: {
