@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const commonPaths = require('./common-paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin =
+	require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const config = {
 	entry: {
@@ -18,7 +20,7 @@ const config = {
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
-				use: ['babel-loader'],
+				use: 'babel-loader',
 			},
 		],
 	},
@@ -46,6 +48,7 @@ const config = {
 			template: 'public/index.html',
 			// favicon: 'public/favicon.ico',
 		}),
+		new BundleAnalyzerPlugin(),
 	],
 }
 module.exports = config

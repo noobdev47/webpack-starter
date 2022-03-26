@@ -7,7 +7,7 @@ const config = {
 		app: [`${commonPaths.appEntry}/index.js`],
 	},
 	output: {
-		filename: 'static/[name].[fullhash].js',
+		filename: 'static/[name].[contenthash].js',
 		clean: true,
 	},
 	devtool: 'source-map',
@@ -15,14 +15,7 @@ const config = {
 		rules: [
 			{
 				test: /\.css$/,
-				use: [
-					{
-						loader: 'style-loader',
-					},
-					{
-						loader: 'css-loader',
-					},
-				],
+				use: ['style-loader', 'css-loader'],
 			},
 		],
 	},
