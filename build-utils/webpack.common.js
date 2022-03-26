@@ -18,9 +18,13 @@ const config = {
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx)$/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				use: 'babel-loader',
+			},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader'],
 			},
 		],
 	},
@@ -48,7 +52,6 @@ const config = {
 			template: 'public/index.html',
 			// favicon: 'public/favicon.ico',
 		}),
-		new BundleAnalyzerPlugin(),
 	],
 }
 module.exports = config

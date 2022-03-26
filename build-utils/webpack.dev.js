@@ -12,14 +12,6 @@ const config = {
 		filename: '[name].[hash].js',
 	},
 	devtool: 'inline-source-map',
-	module: {
-		rules: [
-			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loader'],
-			},
-		],
-	},
 	devServer: {
 		hot: true,
 		port: port,
