@@ -1,7 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import UserService from '../api/user.service'
 
 const List = () => {

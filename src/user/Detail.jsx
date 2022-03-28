@@ -1,6 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import UserService from '../api/user.service'
 
@@ -18,7 +16,7 @@ const Detail = () => {
 	useEffect(() => {
 		fetchUser()
 	}, [])
-	
+
 	return (
 		<div className='d-flex align-items-center justify-content-center flex-column'>
 			<p>Name: {user.name}</p>
